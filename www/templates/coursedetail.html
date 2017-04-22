@@ -1,0 +1,27 @@
+<ion-view view-title="Course Detail">
+  <ion-content padding="15">
+    
+    <div class="list">
+
+      <div class="item item-avatar">
+        <img src="{{course.user.userImageurl}}">
+        <h2>{{course.user.userDisplayName}}</h2>
+        <!--<p>Nine Inch Nails</p>-->
+      </div>
+
+      <div class="item">
+        <h1>{{course.title}}</h1>
+      </div>
+
+      <a class="item item-icon-left assertive" href="#">
+        <i class="icon ion-music-note"></i> Start listening
+      </a>
+
+    </div>
+    <ion-list>
+      <ion-item ng-repeat="chapter in chapters" href="#/app/courses/{{course.$id}}/{{chapter.$id}}">
+        {{$index}} {{chapter.title}}
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

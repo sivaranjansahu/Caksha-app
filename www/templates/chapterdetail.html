@@ -1,0 +1,15 @@
+<ion-view>
+    <ion-nav-title>
+    {{chapter.title}}
+    </ion-nav-title>
+  <ion-content>
+            <div class="item">
+        <h1>{{chapter.title}}</h1>
+      </div>
+    <ion-list>
+      <ion-item ng-repeat="resource in resources" href="#/app/{{chapter.$id}}/{{resource.$id}}">
+        {{$index}} {{resource.siteTitle}}
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
