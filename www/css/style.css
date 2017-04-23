@@ -1,8 +1,101 @@
 /* Empty. Add your own CSS if you like */
 .item{
     border:none;
+    /*margin-bottom: 8px;*/
 }
 .bar.bar-positive{
     background-color:#15364b;
     border: none;
+}
+.item.course-list h2{
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+.ion-android-star{
+    color: #ff9900;
+    font-size: 16px;
+    margin-right: 6px;
+}
+/*.menu-content{
+    background-color: #eee;
+    padding: 15px;
+    box-sizing: border-box;
+}*/
+.course-meta{
+    font-size: 10px;
+}
+.row,.row>.col{
+    padding: 0;
+}
+span.course-category{
+    background-color:#ffcd00;
+    color:#333;
+    padding: 3px 5px;
+    border-radius: 3px;
+}
+.chapter-count{
+    background-color: #15364b;
+    height: 24px;
+    width:24px;
+    color: #fff;
+    border-radius: 12px;
+    line-height: 24px;
+    display: inline-block;
+    text-align: center;
+}
+a.item{
+    margin-bottom: 15px;
+}
+
+/*//Courses screen CSS*/
+.courses-list .item.item-select{
+    background-color:#3283b7;
+}
+.select-container{
+    background-color:#3283b7;
+}
+.select-container {
+    color:#fff;
+}
+.select-container select{
+    -webkit-appearance:none;
+  background-repeat: no-repeat;
+  background-color: rgba(0,0,0,0);  
+  /*border:thin solid #dddddd;*/
+  border: none;
+  font-weight:300;
+  display:inline;
+  vertical-align:middle;
+  color:#fff;
+  padding: auto 0;
+  overflow:hidden;
+  box-sizing:border-box;
+  padding: 6px;
+}
+.text-right{
+    text-align: right;
+}
+/*Courses Details*/
+.course-detail_header{
+    background-color:#3283b7;
+    padding: 15px;
+    
+}
+.course-detail_header h2{
+    color: #fff;
+}
+.course-detail_header .item{
+    background-color:transparent;
+    
+}
+.chapter-count.large{
+    background-color: #15364b;
+    height: 30px;
+    width:30px;
+    color: #fff;
+    border-radius: 15px;
+    line-height: 30px;
+    display: inline-block;
+    text-align: center;
+    margin-right:10px;
 }

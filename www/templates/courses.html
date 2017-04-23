@@ -1,9 +1,41 @@
-<ion-view view-title="Courses">
-  <ion-content>
+<ion-view view-title="Courses" class="courses-list">
+    <div class="bar bar-subheader select-container">
+
+      <div class="row">
+        <div class="col-25">
+
+          Category
+
+        </div>
+        <div class="col-75 text-right">
+          <select ng-model="selectedCategory" ng-change="switchCategory(selectedCategory)">
+         <option selected>All</option>
+        <option ng-repeat="category in categories" value="{{category.$id}}" selected="">{{category.$id}}</option>
+     </select>
+     <span class="ion-chevron-down"></span>
+        </div>
+      </div>
+
+    </div>
+  <ion-content class="has-subheader">
+
+
+
     <ion-list>
-      <ion-item ng-repeat="course in courses" href="#/app/courses/{{course.$id}}">
-          {{course.title}}
-      </ion-item>
+
+      <a class="item item-avatar course-list" ng-repeat="course in courses | filter:{title: ''}" href="#/app/courses/{{course.$id}}">
+        <img src="{{course.user.userImageurl}}" alt="">
+        <h2>{{course.title}}</h2>
+        <div class="row">
+
+          <div class="col course-meta"><span class="chapter-count">{{course.chaptersCount}}</span> Chapters</div>
+          <div class="col course-meta">
+            <span ng-click="switchCategory(course.courseCategory)" class="course-category">{{course.courseCategory}}</span>
+          </div>
+          <div class="col course-meta"><span ng-if="course.rating.starrating" class="ion-android-star"></span>{{course.rating.starrating}}</div>
+        </div>
+      </a>
+
     </ion-list>
   </ion-content>
 </ion-view>

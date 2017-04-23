@@ -61,6 +61,19 @@ angular.module('starter.controllers', [])
   //get all courses
   var ref = firebase.database().ref();
   $scope.courses = $firebaseArray(ref.child('courses'));
+  $scope.categories=$firebaseArray(ref.child('categoories'));
+  $scope.courses.$loaded().then(function(){
+    console.log($scope.courses);
+  })
+  $scope.switchCategory=function(d){
+    console.log(d);
+    if(d=="All"){
+      $scope.courses = $firebaseArray(ref.child('courses'));
+    }else{
+      $scope.courses = $firebaseArray(ref.child('courses').orderByChild('courseCategory').equalTo(d));
+    }
+    
+  }
   
 })
 .controller('courseDetailCtrl', function($scope, $stateParams,$firebaseObject,$firebaseArray) {
@@ -68,6 +81,9 @@ angular.module('starter.controllers', [])
   
   $scope.course = $firebaseObject(ref.child('courses').child($stateParams.courseID));
   $scope.chapters = $firebaseArray(ref.child('chapters').orderByChild('courseID').equalTo($stateParams.courseID));
+  $scope.chapters.$loaded().then(function(){
+    console.log($scope.chapters);
+  })
 })
 .controller('chapterDetailCtrl', function($scope, $stateParams,$firebaseObject,$firebaseArray) {
   var ref = firebase.database().ref();
