@@ -7,8 +7,11 @@
         <h1>{{chapter.title}}</h1>
       </div>
     <ion-list>
-      <ion-item ng-repeat="resource in resources" href="#/app/{{chapter.$id}}/{{resource.$id}}">
+       
+      <ion-item class="item " ng-repeat="resource in resources" href="#/app/{{chapter.$id}}/{{resource.$id}}">
+        <img src="http://www.google.com/s2/favicons?domain={{resource.siteDomain}}" alt="">
         {{$index}} {{resource.siteTitle}}
+        
       </ion-item>
     </ion-list>
   </ion-content>

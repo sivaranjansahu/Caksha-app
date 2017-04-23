@@ -2,3 +2,7 @@
 .item{
     border:none;
 }
+.bar.bar-positive{
+    background-color:#15364b;
+    border: none;
+}

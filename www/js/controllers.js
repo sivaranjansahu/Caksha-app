@@ -77,5 +77,8 @@ angular.module('starter.controllers', [])
 })
 .controller('resourceDetailCtrl', function($scope, $stateParams,$firebaseObject) {
   var ref = firebase.database().ref();
-  $scope.resource = $firebaseObject(ref.child('resources').child($stateParams.resourceID));
+  var res=  $firebaseObject(ref.child('resources').child($stateParams.resourceID));
+  res.$loaded().then(function(data){
+    $scope.resource=data;
+  })
 })
