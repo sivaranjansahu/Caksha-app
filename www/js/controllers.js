@@ -90,6 +90,10 @@ angular.module('starter.controllers', [])
   console.log($stateParams);
   $scope.chapter = $firebaseObject(ref.child('chapters').child($stateParams.chapterID));
   $scope.resources = $firebaseArray(ref.child('resources').orderByChild('chapterID').equalTo($stateParams.chapterID));
+  $scope.chapter.$loaded().then(function(){
+    $scope.course=$firebaseObject(ref.child('courses').child($scope.chapter.courseID));
+  })
+  
 })
 .controller('resourceDetailCtrl', function($scope, $stateParams,$firebaseObject) {
   var ref = firebase.database().ref();

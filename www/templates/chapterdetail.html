@@ -1,18 +1,36 @@
 <ion-view>
-    <ion-nav-title>
-    {{chapter.title}}
-    </ion-nav-title>
+ 
   <ion-content>
-            <div class="item">
-        <h1>{{chapter.title}}</h1>
-      </div>
+      <!--{{chapter}}-->
+      
+         <div class="course-detail_header">
+      <h2>{{chapter.title}}</h2>
+      
+      <h5 ><a href="#/app/courses/{{course.$id}}">{{course.title}}</a></h5>
+      <p>{{chapter.description}}</p>
+    </div>
+    <h4 class="list-head">{{resources.length}} Resources</h4>
+
     <ion-list>
-       
+<!--
       <ion-item class="item " ng-repeat="resource in resources" href="#/app/{{chapter.$id}}/{{resource.$id}}">
-        <img src="http://www.google.com/s2/favicons?domain={{resource.siteDomain}}" alt="">
-        {{$index}} {{resource.siteTitle}}
-        
-      </ion-item>
+        <img src="http://www.google.com/s2/favicons?domain={{resource.siteDomain}}" alt=""> {{$index}} {{resource.siteTitle}}
+
+      </ion-item>-->
+
+      <a class="item chapter-list item-avatar" ng-repeat="resource in resources" href="#/app/{{chapter.$id}}/{{resource.$id}}">
+        <img src="http://www.google.com/s2/favicons?domain={{resource.siteDomain}}" alt=""> 
+        <h2>{{resource.siteTitle}}</h2>
+        <p>{{resource.siteDomain}}</p>
+        <!--<div class="row">
+            
+          <div class="col-10"><span class="chapter-count large">{{$index}}</span></div>
+          <div class="col">
+            <h2>{{resource.siteTitle}}</h2>
+          </div>
+        </div>-->
+
+      </a>
     </ion-list>
   </ion-content>
 </ion-view>

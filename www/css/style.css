@@ -5,12 +5,26 @@
 }
 .bar.bar-positive{
     background-color:#15364b;
-    border: none;
+    /*border: none !important;*/
+        border-color:#15364b;
+    
+    background-image: none  !important;
+    color: #fff;
 }
-.item.course-list h2{
-    font-size: 16px;
+.item.course-list{
+    padding-top: 0;
+}
+.item.course-list:first-child{
+    padding-top:16px;
+}
+.item.course-list h2,.item.chapter-list h2{
+    font-size: 14px;
     margin-bottom: 8px;
 }
+.item.course-list .row{
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 15px;
+} 
 .ion-android-star{
     color: #ff9900;
     font-size: 16px;
@@ -44,7 +58,7 @@ span.course-category{
     text-align: center;
 }
 a.item{
-    margin-bottom: 15px;
+    /*margin-bottom: 10px;*/
 }
 
 /*//Courses screen CSS*/
@@ -76,26 +90,93 @@ a.item{
     text-align: right;
 }
 /*Courses Details*/
+
 .course-detail_header{
-    background-color:#3283b7;
+    background-color:#15364b;
     padding: 15px;
-    
+    padding-top:0;
+        
 }
 .course-detail_header h2{
-    color: #fff;
+    color: #ddd;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+.course-detail_header h5 a{
+    color: #ffdc00;
+    font-weight: normal;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    text-decoration:none;
 }
 .course-detail_header .item{
     background-color:transparent;
+    padding-top:0;
+    padding-bottom: 0;
     
 }
 .chapter-count.large{
     background-color: #15364b;
     height: 30px;
     width:30px;
-    color: #fff;
+    color: #ddd;
     border-radius: 15px;
     line-height: 30px;
     display: inline-block;
     text-align: center;
     margin-right:10px;
+}
+.profile-pic{
+       
+    display: inline-block;
+    text-align: center;
+    margin-right:10px;
+    float: left;
+}
+.profile-pic.small{
+    height: 40px;
+    width:40px;
+    border-radius: 20px;
+    line-height: 40px
+}
+.course-detail_header p{
+    margin-top:30px;
+    color: #ddd;
+    font-weight: normal;
+}
+h4.list-head{
+    background-color: #efefef;
+    padding: 15px;
+    margin-top:0;
+}
+.chapter-list h2{
+    margin-top: 7px;
+}
+.list-container-heading{
+    background-color: #eee;
+    padding-top:10px;
+}
+.list-container-heading h4{
+    margin-bottom: 0;
+}
+.embed-responsive {
+  position: relative;
+  display: block;
+  height: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.embed-responsive.embed-responsive-16by9 {
+  padding-bottom: 56.25%;
+}
+
+.embed-responsive-item {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
 }

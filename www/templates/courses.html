@@ -1,4 +1,4 @@
-<ion-view view-title="Courses" class="courses-list">
+<ion-view  class="courses-list"  title="">
     <div class="bar bar-subheader select-container">
 
       <div class="row">
@@ -23,8 +23,8 @@
 
     <ion-list>
 
-      <a class="item item-avatar course-list" ng-repeat="course in courses | filter:{title: ''}" href="#/app/courses/{{course.$id}}">
-        <img src="{{course.user.userImageurl}}" alt="">
+      <a class="item  course-list" ng-repeat="course in courses | filter:{title: ''}" href="#/app/courses/{{course.$id}}">
+        <!--<img src="{{course.user.userImageurl}}" alt="">-->
         <h2>{{course.title}}</h2>
         <div class="row">
 
