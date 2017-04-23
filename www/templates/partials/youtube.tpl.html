@@ -1,12 +1,16 @@
-<div class="item item-text-wrap">
+
+<div class="course-detail_header">
   <h2>{{resource.resourceData.snippet.title}}</h2>
 
-  <h3><a href="#/app/chapters/{{resource.chapterID}}">Back to chapter</a></h3>
+  <h5><a href="#/app/courses/{{resource.courseID}}/{{resource.chapterID}}">Back to chapter</a></h5>
+  
+</div>
 
+
+<div class="video-container">
+    <iframe width="853" height="480" ng-src="{{getIframeSrc(resource.identifier) | trusted}}" frameborder="0" allowfullscreen</iframe
 </div>
-<div class="embed-responsive embed-responsive-16by9">
-  <youtube-video class="embed-responsive-item" video-id="resource.identifier"></youtube-video>
-</div>
+
 <div class="item item-text-wrap">
   <p>{{resource.resourceData.snippet.description}}</p>
 </div>

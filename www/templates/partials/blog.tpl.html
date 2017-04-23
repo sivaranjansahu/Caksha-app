@@ -1,0 +1,28 @@
+<div class="course-detail_header">
+  <h2>{{resource.siteTitle}}</h2>
+
+  <h5><a href="#/app/courses/{{resource.courseID}}/{{resource.chapterID}}">Back to chapter</a></h5>
+  
+</div>
+
+<div class="list card">
+
+  <div class="item item-avatar">
+    <img src="http://www.google.com/s2/favicons?domain={{resource.siteDomain}}" alt="">
+    <h2>{{resource.siteDomain}}</h2>
+    <p>{{resource.resourceData.ownerName}}</p>
+  </div>
+
+  <div class="item item-body">
+    
+    <img src="{{resource.siteImage}}" alt="">
+    <p>
+      {{resource.siteDescription}}
+    </p>
+    <p>
+      <a href="#" class="subdued">{{resource.commentCount}} Comments</a>
+
+    </p>
+  </div>
+
+</div>

@@ -62,9 +62,9 @@ angular.module('starter.controllers', [])
   var ref = firebase.database().ref();
   $scope.courses = $firebaseArray(ref.child('courses'));
   $scope.categories=$firebaseArray(ref.child('categoories'));
-  $scope.courses.$loaded().then(function(){
-    console.log($scope.courses);
-  })
+  // $scope.courses.$loaded().then(function(){
+  //   console.log($scope.courses);
+  // })
   $scope.switchCategory=function(d){
     console.log(d);
     if(d=="All"){
@@ -101,4 +101,7 @@ angular.module('starter.controllers', [])
   res.$loaded().then(function(data){
     $scope.resource=data;
   })
+  $scope.getIframeSrc = function (videoId) {
+  return 'https://www.youtube.com/embed/' + videoId;
+};
 })
