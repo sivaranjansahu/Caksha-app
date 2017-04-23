@@ -1,0 +1,25 @@
+{
+  "name": "Caksha App",
+  "private": true,
+  "devDependencies": {
+    "ionic": "driftyco/ionic-bower#1.3.3"
+  },
+  "authors": [
+    "sivaranjansahu <sivaranjan@outlook.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "www/lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angularfire": "^2.3.0"
+  }
+}
