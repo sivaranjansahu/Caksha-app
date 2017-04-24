@@ -1,22 +1,22 @@
-<ion-view  class="courses-list"  title="">
-    <div class="bar bar-subheader select-container">
+<ion-view class="courses-list" title="">
+  <div class="bar bar-subheader select-container">
 
-      <div class="row">
-        <div class="col-25">
+    <div class="row">
+      <!--<div class="col-25">
 
-          Category
+        Category
 
-        </div>
-        <div class="col-75 text-right">
-          <select ng-model="selectedCategory" ng-change="switchCategory(selectedCategory)">
+      </div>-->
+      <div class="col-75">
+        <select ng-model="selectedCategory" ng-change="switchCategory(selectedCategory)">
          <option selected>All</option>
         <option ng-repeat="category in categories" value="{{category.$id}}" selected="">{{category.$id}}</option>
      </select>
-     <span class="ion-chevron-down"></span>
-        </div>
+        <span class="ion-chevron-down"></span>
       </div>
-
     </div>
+
+  </div>
   <ion-content class="has-subheader">
 
 

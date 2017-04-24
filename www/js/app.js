@@ -4,9 +4,14 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.controllers', 'starter.directives','starter.filters','youtube-embed','firebase'])
+angular.module('starter', ['ionic', 'starter.controllers', 'starter.directives',
+'starter.filters','ngCordova','youtube-embed','firebase','ngCordova','ngCordovaOauth','ngOpenFB'])
 
-.run(function($ionicPlatform) {
+.run(function($ionicPlatform,ngFB) {
+  ngFB.init({
+    appId: '158543768008352',
+    tokenStore: window.localStorage
+});
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
@@ -71,13 +76,23 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.directives',
       }
     }
   })
+  .state('app.settings', {
+    url: '/settings',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/settings.html',
+        controller: 'settingsCtrl'
+      }
+    }
+  })
 
 
-  .state('app.browse', {
-      url: '/browse',
+  .state('app.login2', {
+      url: '/login2',
       views: {
         'menuContent': {
-          templateUrl: 'templates/browse.html'
+          templateUrl: 'templates/log2.html',
+          controller: 'AuthCtrl'
         }
       }
     })
@@ -101,7 +116,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.directives',
     }
   });
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/playlists');
+  $urlRouterProvider.otherwise('/app/courses');
 })
 
 

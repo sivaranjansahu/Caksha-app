@@ -1,0 +1,36 @@
+<ion-view title="">
+  <ion-content>
+    <div class="item">
+      <h1>Settings</h1>
+    </div>
+
+    <ion-list>
+      <img src="" alt="">
+
+      <label class="item item-input item-stacked-label">
+    <span class="input-label">Display Name</span>
+    <input type="text" placeholder="{{user.displayName}}" ng-model="newData.displayName">
+  </label>
+      <label class="item item-input item-stacked-label">
+    <span class="input-label">Email</span>
+    
+    <input type="text" placeholder="{{user.email}}" ng-model="newData.email">
+  </label>
+      
+      <!--<label class="item item-input item-stacked-label">
+    <span class="input-label">Default category</span>
+                  <select ng-model="selectedCategory" ng-change="switchCategory(selectedCategory)">
+         <option selected>All</option>
+        <option ng-repeat="category in categories" value="{{category.$id}}" selected="">{{category.$id}}</option>
+     </select>
+  </label>-->
+<div class="item">
+    <button class="button button-positive" ng-click="updateProfile()">
+  Update profile
+</button>
+</div>
+    </ion-list>
+
+  </ion-content>
+
+</ion-view>

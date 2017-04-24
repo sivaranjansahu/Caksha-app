@@ -19,19 +19,23 @@
     </ion-header-bar>
     <ion-content>
       <ion-list>
-        <ion-item menu-close ng-click="login()">
+        <ion-item menu-close ng-if="!user" href="#/app/login2">
           Login
         </ion-item>
         <ion-item menu-close href="#/app/courses">
           Courses
         </ion-item>
-        <ion-item menu-close href="#/app/browse">
-          Browse
+        
+        <ion-item menu-close href="#/app/settings">
+          Settings
         </ion-item>
-        <ion-item menu-close href="#/app/playlists">
-          Playlists
+        <ion-item menu-close  ng-if="user" ng-click="logoff()">
+          Logout
         </ion-item>
       </ion-list>
+      <img src="{{userPhotoURL}}" alt="">
+      <h3>{{loggedUserName}}</h3>
+
     </ion-content>
   </ion-side-menu>
 </ion-side-menus>
